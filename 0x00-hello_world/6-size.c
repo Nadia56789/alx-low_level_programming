@@ -1,14 +1,20 @@
-#include <stdio.h>
+#include<stdio.h>
+/**
+ * main - A programe that  the size of various types on the computer
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int integerType;
-float floatType;
-double doubleType;
-char charType;
+	char a;
+	int b;
+	long int c;
+	long long int e;
+	float f;
 
-printf("Size of int: %ld bytes\n", sizeof(integerType));
-printf("Size of float: %ld bytes\n", sizeof(floatType));
-printf("Size of double: %ld bytes\n", sizeof(doubleType));
-printf("Size of char: %ld byte\n", sizeof(charType));
-return(0);
+printf("Size of a char: %ld byte(s)\n", sizeof(a));
+printf("Size of an int: %ld byte(s)\n", sizeof(b));
+printf("Size of a long int: %ld byte(s)\n", sizeof(c));
+printf("Size of a long long int: %ld byte(s)\n", sizeof(e));
+printf("Size of a float: %ld byte(s)\n", sizeof(f));
+return (0);
 }
