@@ -5,15 +5,12 @@
 *
 *Return: returns nothing
 */
-
 void print_numbers(void)
 {
-int i;
-i = 0;
-while (i <= 10)
+int number = 48;
+for (number = 48; number < 58; number++)
 {
-_putchar(i);
-i++;
+_putchar(number);
 }
-return (10);
+_putchar(10);
 }
