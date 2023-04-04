@@ -2,11 +2,6 @@
 #define MAIN_H
 #include <stddef.h>
 #include <stdio.h>
-/**
-*void prototypes(void)
-*int prototypes(int)
-*char prototypes(char)
-*/
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
