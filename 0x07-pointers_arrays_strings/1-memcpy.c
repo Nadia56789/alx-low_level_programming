@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
 *_memcpy - The _memcpy() function that copies memory area
 *@dest:area where bytes are copied to
