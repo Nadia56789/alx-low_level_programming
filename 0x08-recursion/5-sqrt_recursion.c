@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * check - checks for the square root
- * @a:int
- * @b:int
+ * check_sqrt - checks for the square root
+ * @x:int
+ * @y:int
  *
  * Return: int
  */
-int check(int a, int b)
+int check_sqrt(int x, int y)
 {
-	if (a * a == b)
-		return (a);
-	if (a * a > b)
+	if (x * x == y)
+		return (x);
+	if (x * x > y)
 		return (-1);
-	return (check(a + 1, b));
+	return (check_sqrt(x + 1, y));
 }
 
 /**
@@ -25,6 +25,6 @@ int _sqrt_recursion(int n)
 {
 	if (n == 0)
 		return (0);
-	return (check(1, n));
+	return (check_sqrt(1, n));
 }
 
