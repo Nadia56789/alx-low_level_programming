@@ -2,8 +2,8 @@
 
 /**
  * check - checks to see if number is prime
- * @a:int
- * @b:int
+ * @x:int
+ * @y:int
  * Return:int
  */
 int check(int x, int y)
