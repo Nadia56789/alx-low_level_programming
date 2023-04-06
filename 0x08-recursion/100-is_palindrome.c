@@ -1,5 +1,6 @@
 #include "main.h"
 
+int check_palindrome(char *s);
 
 /**
   * is_palindrome - Returns if a string is palindrome
@@ -23,12 +24,12 @@ int is_palindrome(char *s)
   */
 int check_palindrome(char *s)
 {
-	int k = _strlen_recursion(s) - 1;
+	int l = _strlen_recursion(s) - 1;
 
-	if (*s == s[k])
+	if (*s == s[l])
 	{
 		s++;
-		k--;
+		l--;
 	}
 	else
 	{
@@ -38,6 +39,7 @@ int check_palindrome(char *s)
 	return (1);
 }
 
+#include "main.h"
 /**
 * _strlen_recursion - return the  length of a string
 * @s: string to be measured
@@ -56,4 +58,3 @@ int _strlen_recursion(char *s)
 	return (lent);
 
 }
-
