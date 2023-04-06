@@ -7,13 +7,13 @@
  *
  * Return: int
  */
-int check(int x, int y)
+int check(int a, int b)
 {
-	if (x * x == b)
-		return (x);
-	if (x * x > y)
+	if (a * a == b)
+		return (a);
+	if (a * a > b)
 		return (-1);
-	return (check(x + 1, b));
+	return (check(a + 1, b));
 }
 
 /**
@@ -27,3 +27,4 @@ int _sqrt_recursion(int n)
 		return (0);
 	return (check(1, n));
 }
+
