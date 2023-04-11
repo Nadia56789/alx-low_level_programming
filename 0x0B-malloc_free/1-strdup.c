@@ -27,7 +27,6 @@ char *_strdup(char *str)
 
 	strcpy(copy, str);
 
-	copy[len] = '\0';
 
 	return (copy);
 
