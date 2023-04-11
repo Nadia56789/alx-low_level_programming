@@ -33,8 +33,6 @@ return (NULL);
 
 
 strcpy(copy, str);
-
-
 return (copy);
 
 }
