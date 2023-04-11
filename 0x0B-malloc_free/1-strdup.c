@@ -12,7 +12,7 @@
 
 char *_strdup(char *str)
 {
-	char *cpy;
+	char *copy;
 	int index, len;
 
 	if (str == NULL)
@@ -20,18 +20,19 @@ char *_strdup(char *str)
 
 	for (index = 0; str[index]; index++)
 		len++;
-	cpy = malloc(sizeof(char) * (len + 1));
+	copy = malloc(sizeof(char) * (len + 1));
 
-	if (cpy == NULL)
+	if (copy == NULL)
 		return (NULL);
 
 	for (index = 0; str[index]; index++)
 	{
-		cpy[index] = str[index];
+		copy[index] = str[index];
 	}
 
-	cpy[len] = '\0';
+	copy[len] = '\0';
 
-	return (cpy);
+	return (copy);
+
 
 }
