@@ -34,5 +34,7 @@ return (NULL);
 
 strcpy(copy, str);
 
+cpy[len] = '\0';
+
 return (copy);
 }
