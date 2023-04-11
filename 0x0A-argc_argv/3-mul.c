@@ -6,21 +6,19 @@
 *Return: returns 0
 */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int a, b, mult;
+	int i, j;
 
-	if (argc < 3)
+	if (argc <= 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[2]);
-	mult = a * b;
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
+	printf("%d\n", i * j);
 
-	printf("%d\n", mult);
 	return (0);
-}
 }
