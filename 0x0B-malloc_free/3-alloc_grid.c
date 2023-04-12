@@ -1,34 +1,48 @@
+#include "main.h"
 #include <stdlib.h>
-#include <string.h>
+/**
+ * alloc_grid - nested loop to make grid
+ * @width: width input
+ * @height: height input
+ * Return: pointer to 2 dim. array
+ */
+int **alloc_grid(int width, int height)
+{
+	int **mee;
+	int x, y;
 
-char *str_concat(char *s1, char *s2)
-{
-char *result;
-int lent1, lent2;
+	if (width <= 0 || height <= 0)
+		return (NULL);
 
-if (s1 == NULL)
-{
-s1 = "";
-if (s2 == NULL)
-{
-s2 = "";
+	mee = malloc(sizeof(int *) * height);
+
+	if (mee == NULL)
+		return (NULL);
+
+	for (x = 0; x < height; x++)
+	{
+		mee[x] = malloc(sizeof(int) * width);
+
+		if (mee[x] == NULL)
+		{
+			for (; x >= 0; x--)
+				free(mee[x]);
+
+			free(mee);
+			return (NULL);
+		}
+	}
+
+	for (x = 0; x < height; x++)
+	{
+		for (y = 0; y < width; y++)
+			mee[x][y] = 0;
+	}
+
+	return (mee);
 }
 
 
-len1 = strlen(s1);
-len2 = strlen(s2);
 
 
-result = (char *) malloc(sizeof(char) * (len1 + len2 + 1));
-if (result == NULL)
-{
-return (NULL);
-}
-
-
-memcpy(result, s1, len1);
-memcpy(result + len1, s2, len2 + 1);
-
-return (result);
-}
 
