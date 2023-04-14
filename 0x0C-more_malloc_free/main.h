@@ -7,3 +7,4 @@ int *array_range(int min, int max);
 int _strlen(char *s);
 char *_strncpy(char *s2, char *s1, int n);
 char *_strncat(char *dest, char *src, int n);
+char *_memset(char *ptr, char nmemb, unsigned int size);
