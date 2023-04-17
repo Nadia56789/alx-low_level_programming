@@ -8,9 +8,11 @@
 *@owner: owner's name
 */
 
-sruct dog
+struct dog
 {
 	char *name;
 	char *owner;
 	int age;
 };
+
+
