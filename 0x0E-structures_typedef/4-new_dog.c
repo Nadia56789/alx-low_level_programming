@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <dog.h>
+#include "dog.h"
 /**
  * new_dog -  creates a new dog.
  * @name: name of dog
@@ -39,52 +39,38 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- *
- * Return: the length of the string
+ *_strlen - returns the length of a string
+ * @s: string
+ *Return: returns lenght;
  */
+
 int _strlen(char *s)
 {
-	int i;
+int i, cpt;
 
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-
-	return (i);
+cpt = 0;
+for (i = 0; s[i] != '\0'; i++)
+cpt++;
+return (cpt);
 }
 
+
 /**
- * *_strcpy - copies the string pointed to by src
- * including the terminating null byte (\0)
- * to the buffer pointed to by dest
- * @dest: pointer to the buffer in which we copy the string
- * @src: string to be copied
- *
- * Return: the pointer to dest
- */
+* _strcpy - Copy paste string
+*@dest: destination
+*@src: source
+*Return: dest
+*/
 char *_strcpy(char *dest, char *src)
 {
-	int len, i;
-
-	len = 0;
-
-	while (src[len] != '\0')
-	{
-		len++;
-	}
-
-	for (i = 0; i < len; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
-
-	return (dest);
+int inc = 0;
+while (*(src + inc) != '\0')
+{
+*(dest + inc) = *(src + inc);
+inc++;
+}
+*(dest + inc) = '\0';
+return (dest);
 }
 
 
