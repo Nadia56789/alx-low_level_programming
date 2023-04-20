@@ -2,11 +2,12 @@
 #include <stdarg.h>
 
 /**
- *sum_them_all -  returns the sum of all its parameters
- *@n:first parameter
- *return:0 if n is null
- *or sum of parameters in other case
- */
+*sum_them_all - sums all its parameters
+*@n: first parameter
+*
+*Return: 0 if n is null
+* or sum of parameters in other case
+*/
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list list;
