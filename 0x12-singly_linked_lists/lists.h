@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * struct list_s - function that prints all the elements of a list_t
+ * struct list_s -  singly linked list
  * @str: string 
  * @len: length of the string
  * @next: points to the next node
