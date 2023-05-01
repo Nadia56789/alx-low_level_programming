@@ -1,19 +1,23 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * get_nodeint_at_index - returns the nth node of a linked list
- * @head: head of a list.
- * @index: index of the node.
- * Return: nth node. If node does not exist, returns NULL.
- */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+ * pop_listint - Delete the first element of a singly linked list.
+ * @head: Pointer to a list.
+ * Return: Integer if success.
+ **/
+
+int pop_listint(listint_t **head)
 {
-	unsigned int i;
+	listint_t *node;
+	int m;
 
-	for (i = 0; i < index && head; i++)
-	{
-		head = head->next;
-	}
+	if (*head == NULL)
+		return (0);
 
-	return (head);
+	node = *head;
+	*head = node->next;
+	m = node->n;
+	free(node);
+	return (m);
 }
