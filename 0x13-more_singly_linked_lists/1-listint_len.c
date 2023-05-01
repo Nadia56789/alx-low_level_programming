@@ -7,15 +7,15 @@
  * Return: number of elements in the list.
  */
 
-size_t listint_t(const listint_t *s)
+size_t listint_len(const listint_t *h)
 {
 	size_t cpt = 0;
 
-	while (s != NULL)
+	while (h != NULL)
 
 	{
 		
-		s = s->next;
+		h = h->next;
 		cpt++;
 	}
 
