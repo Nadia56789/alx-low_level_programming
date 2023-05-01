@@ -7,7 +7,7 @@
  * Return: number of elements in the list.
  */
 
-size_t list_len(const list_t *s)
+size_t list_len(const listint_t *s)
 {
 	size_t cpt = 0;
 
