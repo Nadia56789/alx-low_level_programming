@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * list_len - returns then number of elements in a list.
+ * listint_t - returns then number of elements in a list.
  * @s: singly linked list.
  * Return: number of elements in the list.
  */
 
-size_t list_len(const listint_t *s)
+size_t listint_t(const listint_t *s)
 {
 	size_t cpt = 0;
 
