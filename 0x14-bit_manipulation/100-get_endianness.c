@@ -1,17 +1,13 @@
 #include <stdio.h>
 
-/**
- * flip_bits - returns the number of bits you would
- * need to flip to get from one number to another
- * @n: number one.
- * @m: number two.
- *
- * Return: number of bits.
+ /**
+ * get_endianness - checks the endianness
+ * Return: 0 if big endian, 1 if little endian
  */
 int get_endianness(void)
 {
-    int y = 1;
-    char *c = (char *)&y;
-    return (*c == 1);
+int y = 1;
+char *c = (char *)&y;
+return (*c == 1);
 }
 
